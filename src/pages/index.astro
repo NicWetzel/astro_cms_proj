@@ -1,12 +1,30 @@
 ---
 import PrimaryLayout from '../layouts/PrimaryLayout.astro'
+import FeaturedArticle from '../components/FeaturedArticle.astro'
+import PopularArticles from '../components/PopularArticles.astro'
 ---
 
 <PrimaryLayout title = Homepage>
-	<!-- Header -->
-	<!-- Three-Cols -->
-		<!-- Featured Article -->
-		<!-- New Articles -->
-	<!-- Three-Cols -->
-		<!-- Popular Articles -->
+	<div class="three-columns section">
+		<FeaturedArticle class="span-2" />
+		<div class="inverted flow">
+			<h2 class="accent-color">New</h2>
+			<ul role="list" class="separated-list">
+				<li><article class="flow">
+				<h3><a href="#">Article 1</a></h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et quibusdam voluptatibus suscipit odio inventore.</p>
+			</article></li>
+				<li><article class="flow">
+				<h3>Article 2</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et quibusdam voluptatibus suscipit odio inventore.</p>
+			</article></li>
+				<li><article class="flow">
+				<h3>Article 3</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et quibusdam voluptatibus suscipit odio inventore.</p>
+			</article></li>
+			</ul>	
+		</div>
+	</div>
+
+	<PopularArticles class="three-columns section" />
 </PrimaryLayout>

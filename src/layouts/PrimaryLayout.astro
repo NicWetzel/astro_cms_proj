@@ -1,5 +1,6 @@
 ---
 import '../style.css';
+import Header from '../components/Header.astro';
 const {title = "FEM Blog with CMS"} = Astro.props
 ---
 
@@ -11,7 +12,10 @@ const {title = "FEM Blog with CMS"} = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="base-layout">
+		<Header />
+		<main id="main-content">
+			<slot />
+		</main>
 	</body>
 </html>
